@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 390
     height: 415
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 83
+  controlID: 37
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 324
     height: 635
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 84
+  controlID: 38
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 85
+  controlID: 109
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -380,14 +380,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Enemy
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\Test Proect\TEST PROJECT
+  m_LastProjectPath: E:\LIBRARY\Test-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 225d0000
-    m_LastClickedID: 23842
-    m_ExpandedIDs: 00000000225d0000285d000000ca9a3b
+    m_SelectedIDs: 405d0000
+    m_LastClickedID: 23872
+    m_ExpandedIDs: 000000003e5d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000225d0000
+    m_ExpandedIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -506,7 +506,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 70
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -543,8 +543,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aa5c0000
-      m_LastClickedID: 23722
+      m_SelectedIDs: 885c0000
+      m_LastClickedID: 23688
       m_ExpandedIDs: 2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -689,7 +689,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -827,9 +827,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -25.16121, y: 15.583529, z: -12.436564}
+    m_Target: {x: 5.457535, y: -6.2531624, z: 8.98764}
     speed: 2
-    m_Value: {x: -25.404167, y: 14.662902, z: -13.154085}
+    m_Value: {x: 5.457535, y: -6.2531624, z: 8.98764}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -876,13 +876,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.29829094, y: 0.32322595, z: -0.10802618, w: 0.8916183}
+    m_Target: {x: -0.21997729, y: -0.1304484, z: 0.029595546, w: -0.96635103}
     speed: 2
-    m_Value: {x: 0.29977465, y: 0.32170942, z: -0.10805573, w: 0.89160657}
+    m_Value: {x: -0.21996441, y: -0.13044077, z: 0.029593814, w: -0.96629447}
   m_Size:
-    m_Target: 126.42442
+    m_Target: 60.2322
     speed: 2
-    m_Value: 120.98031
+    m_Value: 60.2322
   m_Ortho:
     m_Target: 0
     speed: 2
