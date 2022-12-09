@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public List<GameObject> PlayerList;
     public GameObject Enemy;
     public GameObject EnemyParent;
+    public List<GameObject> EnemyList;
     public GameObject Pos1;
     public GameObject Pos2;
     public GameObject Slinder;
@@ -17,32 +18,55 @@ public class GameController : MonoBehaviour
     public List<GameObject> SlinderList;
     void Start()
     {
-        //InsSlinder();
-        StartCoroutine(PlayerIns());
-        StartCoroutine(EnemyIns());
+        
         
     }
-
-    IEnumerator PlayerIns()
+    private void Awake()
     {
-        Vector3 playerPos = new Vector3(Random.Range(-40, 40), 1, Random.Range(-40, 0));
-        for (int i = 0; i < 1; i++)
+        InsSlinder();
+        PlayerIns();
+        EnemyIns();
+        StartCoroutine(EnemyOnOf());
+
+    }
+    public void PlayerIns()
+    {
+        if (PlayerList.Count == 20)
         {
+            for (int i = 0; i < PlayerList.Count ; i++)
+            {
+                PlayerList[i].SetActive(true);
+            }
+        }
+        else
+        {
+            Vector3 playerPos = new Vector3(Random.Range(-40, 40), 1, Random.Range(-40, 0));
             GameObject player = Instantiate(Player, playerPos, Quaternion.identity, PlayerParent.transform);
             PlayerList.Add(player);
         }
-        yield return new WaitForSecondsRealtime(15f);
-        StartCoroutine(PlayerIns());
+                     
     }
-    IEnumerator EnemyIns()
+    void EnemyIns()
     {
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 20; i++)
         {
             GameObject enemy = Instantiate(Enemy, Pos2.transform.position, Quaternion.identity, EnemyParent.transform);
-            
-        }        
-        yield return new WaitForSecondsRealtime(3f);
-        StartCoroutine(EnemyIns());
+            EnemyList.Add(enemy);
+        }
+        for (int i = 0; i < EnemyList.Count; i++)
+        {
+            EnemyList[i].SetActive(false);
+        }
+
+    }
+    IEnumerator EnemyOnOf()
+    {        
+        for (int i = 0; i < EnemyList.Count; i++)
+        {
+            EnemyList[i].SetActive(true);
+            yield return new WaitForSecondsRealtime(3f);
+        }
+
     }
     void InsSlinder()
     {
