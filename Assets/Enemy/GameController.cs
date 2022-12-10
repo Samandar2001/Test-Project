@@ -24,33 +24,35 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         InsSlinder();
-        PlayerIns();
+        //PlayerIns();
         EnemyIns();
         StartCoroutine(EnemyOnOf());
 
     }
-    public void PlayerIns()
-    {
-        if (PlayerList.Count == 20)
-        {
-            for (int i = 0; i < PlayerList.Count ; i++)
-            {
-                PlayerList[i].SetActive(true);
-            }
-        }
-        else
-        {
-            Vector3 playerPos = new Vector3(Random.Range(-40, 40), 1, Random.Range(-40, 0));
-            GameObject player = Instantiate(Player, playerPos, Quaternion.identity, PlayerParent.transform);
-            PlayerList.Add(player);
-        }
+    //public void PlayerIns()
+    //{
+    //    if (PlayerList.Count == 20)
+    //    {
+    //        for (int i = 0; i < PlayerList.Count ; i++)
+    //        {
+    //            PlayerList[i].SetActive(true);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Vector3 playerPos = new Vector3(Random.Range(-40, 40), 1, Random.Range(-40, 0));
+    //        GameObject player = Instantiate(Player, playerPos, Quaternion.identity, PlayerParent.transform);
+    //        PlayerList.Add(player);
+    //    }
                      
-    }
+    //}
     void EnemyIns()
     {
-        for (int i = 0; i < 20; i++)
+        
+        for (int i = 0; i < 18; i++)
         {
-            GameObject enemy = Instantiate(Enemy, Pos2.transform.position, Quaternion.identity, EnemyParent.transform);
+            Vector3 enemyPos = new Vector3(Random.Range(-40, 40), 1, Random.Range(40, 0));
+            GameObject enemy = Instantiate(Enemy, enemyPos, Quaternion.identity, EnemyParent.transform);
             EnemyList.Add(enemy);
         }
         for (int i = 0; i < EnemyList.Count; i++)
@@ -64,22 +66,14 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < EnemyList.Count; i++)
         {
             EnemyList[i].SetActive(true);
-            yield return new WaitForSecondsRealtime(3f);
+            yield return new WaitForSecondsRealtime(4f);
         }
 
     }
     void InsSlinder()
     {
-        for (float i = 0.5f; i < 17; i += 2)
-        {
-            GameObject slinder = Instantiate(Slinder, new Vector3(SlinderParent.transform.position.x, SlinderParent.transform.position.y + i, SlinderParent.transform.position.z), Quaternion.identity, SlinderParent.transform);
-            SlinderList.Add(slinder);
-        }
-        for (float i = 1.5f; i < 18; i += 2)
-        {
-            GameObject slinder = Instantiate(SlinderOch, new Vector3(SlinderParent.transform.position.x, SlinderParent.transform.position.y + i, SlinderParent.transform.position.z), Quaternion.identity, SlinderParent.transform);
-            SlinderList.Add(slinder);
-        }
+        Vector3 slinderParentPos = new Vector3(Random.Range(-40, 40), 1, Random.Range(40, 0));
+        GameObject slinderParent = Instantiate(SlinderParent, slinderParentPos, Quaternion.identity);        
     }
 }
 
