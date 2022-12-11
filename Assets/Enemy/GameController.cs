@@ -72,7 +72,7 @@ public class GameController : MonoBehaviour
     }
     void InsSlinder()
     {
-        Vector3 slinderParentPos = new Vector3(Random.Range(20, -20), 1, Random.Range(-30, -20));
+        Vector3 slinderParentPos = new Vector3(Random.Range(-20, 20), 1, Random.Range(-30, -20));
         GameObject slinderParent = Instantiate(SlinderParent, slinderParentPos, Quaternion.identity);        
     }
 }
