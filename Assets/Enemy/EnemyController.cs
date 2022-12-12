@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     private Transform tower;
     private NavMeshAgent nav;
     public bool enemy = true;
+    public GameObject Particle;
     void Start()
     {        
         tower = GameObject.FindGameObjectWithTag("TOWER").transform;        
@@ -20,7 +21,8 @@ public class EnemyController : MonoBehaviour
         {
             Tower = GameObject.FindGameObjectWithTag("TOWER");
             Tower.SetActive(false);
-            gameObject.SetActive(false);       
+            gameObject.SetActive(false);
+            GameObject particle = Instantiate(Particle, Tower.transform.position, Quaternion.identity);
             enemy = false;
         }
     }
