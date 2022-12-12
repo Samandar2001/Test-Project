@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class GameController : MonoBehaviour
     public GameObject SlinderOch;
     public GameObject SlinderParent;
     public List<GameObject> SlinderList;
+    public GameObject UI;
+    public TMP_Text TabloSon;
+    public int son = 0;
     void Start()
     {
         
@@ -27,7 +31,7 @@ public class GameController : MonoBehaviour
         //PlayerIns();
         EnemyIns();
         StartCoroutine(EnemyOnOf());
-
+        StartCoroutine(TablogaSonQoshish());      
     }
     //public void PlayerIns()
     //{
@@ -48,7 +52,6 @@ public class GameController : MonoBehaviour
     //}
     void EnemyIns()
     {
-        
         for (int i = 0; i < 18; i++)
         {
             Vector3 enemyPos = new Vector3(Random.Range(-40, 40), 1, Random.Range(40, 0));
@@ -73,7 +76,15 @@ public class GameController : MonoBehaviour
     void InsSlinder()
     {
         Vector3 slinderParentPos = new Vector3(Random.Range(-20, 20), 1, Random.Range(-30, -20));
-        GameObject slinderParent = Instantiate(SlinderParent, slinderParentPos, Quaternion.identity);        
+        GameObject slinderParent = Instantiate(SlinderParent, slinderParentPos, Quaternion.identity);
+        GameObject ui = Instantiate(UI, new Vector3(slinderParent.transform.position.x, slinderParent.transform.position.y, slinderParent.transform.position.z - 4.6f), Quaternion.identity);
+    }
+    IEnumerator TablogaSonQoshish()
+    {
+        son = son + 10;
+        TabloSon.text = son.ToString();
+        yield return new WaitForSecondsRealtime(3f);
+        StartCoroutine(TablogaSonQoshish());
     }
 }
 

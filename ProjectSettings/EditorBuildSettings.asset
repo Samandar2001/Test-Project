@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Enemy/Enemy.unity
+    guid: d8af69c770747a746855254c4fa8c370
   m_configObjects: {}
