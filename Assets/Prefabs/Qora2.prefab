@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1686066600349607677}
   - component: {fileID: 8530037626839844951}
   m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: TOWER
+  m_Name: Qora2
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

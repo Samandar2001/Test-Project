@@ -23,10 +23,5 @@ public class SlinderParent : MonoBehaviour
             GameObject slinder = Instantiate(SlinderOch, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + i, gameObject.transform.position.z), Quaternion.identity, gameObject.transform);
             SlinderList.Add(slinder);
         }
-    }
-    
-    void Update()
-    {
-        
-    }
+    }  
 }
