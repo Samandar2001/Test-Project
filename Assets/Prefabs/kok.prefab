@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4254345773235106178}
   - component: {fileID: 7709850139394358565}
   m_Layer: 0
-  m_Name: Ochrang
+  m_Name: kok
   m_TagString: TOWER
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
